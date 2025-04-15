@@ -3,27 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mom's Memory Journal</title>
+  <title>Mom’s Memory Journal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
+  <!-- Background Audio -->
+  <audio id="background-audio" loop autoplay>
+    <source src="audio/your_audio_file.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="notebook">
+    <div class="cover-page" id="cover-page">
+      <div class="cover-content">
+        <h1>Mom's Memory Journal</h1>
+        <p>Welcome to the Journal</p>
+        <button onclick="nextPage()">Start</button>
+      </div>
+    </div>
+
+    <!-- Pages 1 to 14 -->
     <div class="page" id="page1">
-      <img src="assets/photo1.jpg" alt="Photo 1" class="photo">
-      <p class="caption">Caption 1 goes here.</p>
+      <img src="images/photo1.jpg" alt="Memory 1" class="photo">
+      <p class="caption">Your first memory with me...</p>
+      <button onclick="nextPage()">Next</button>
     </div>
     <div class="page" id="page2">
-      <img src="assets/photo2.jpg" alt="Photo 2" class="photo">
-      <p class="caption">Caption 2 goes here.</p>
+      <img src="images/photo2.jpg" alt="Memory 2" class="photo">
+      <p class="caption">We went on that special trip...</p>
+      <button onclick="nextPage()">Next</button>
     </div>
-    <!-- Add more pages here -->
-    <div class="final-page" id="final-page">
-      <p>Here's your heartfelt love letter... <br> [Your message goes here]</p>
+    <!-- Repeat for pages 3 through 14 -->
+    <div class="page" id="page15">
+      <div class="final-page" id="final-page">
+        <div class="love-letter">
+          <h2>Your Love Letter</h2>
+          <p>Dear Mom,</p>
+          <p>Here is my heart, wrapped in memories. You have always been the light that guided me...</p>
+          <p>Through every laugh, every tear, you’ve shaped the person I am today.</p>
+          <p>With all my love, forever.</p>
+          <p><i>Your Child</i></p>
+        </div>
+      </div>
     </div>
+
   </div>
-  <audio id="background-audio" autoplay loop>
-    <source src="assets/audio.mp3" type="audio/mp3">
-  </audio>
+
   <script src="scripts.js"></script>
 </body>
 </html>
