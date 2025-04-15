@@ -1,40 +1,139 @@
+/* General Page Styles */
 body {
-  font-family: 'Patrick Hand', cursive;
-  background: url('https://www.transparenttextures.com/patterns/grid.png');
-  background-size: 20px 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  width: 100%;
-  padding: 20px;
+.notebook {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
-.page {
-  margin: 20px 0;
-  padding: 10px;
-  border: 2px solid #ddd;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.photo {
-  width: 100%;
-  max-width: 300px;
-  transform: rotate(-5deg);
-  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
-}
-
-.caption {
-  font-size: 1.2em;
-  margin-top: 10px;
-}
-
-.final-page {
-  margin-top: 50px;
-  font-size: 1.5em;
+/* Cover Page */
+.cover-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('images/grid-texture.jpg');
+  background-size: cover;
+  height: 100vh;
   text-align: center;
 }
 
-/* Add more custom styles as needed */
+.cover-content h1 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cover-content p {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.cover-content button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #8e6e4e;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cover-content button:hover {
+  background-color: #704b33;
+}
+
+/* General Page Styles */
+.page {
+  display: none;
+  background: url('images/grid-texture.jpg');
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.page img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.page .caption {
+  font-family: 'Georgia', serif;
+  font-size: 1.5em;
+  color: #6f4e37;
+  text-align: center;
+}
+
+/* Final Page - Love Letter as Last Cover */
+.final-page {
+  display: none;
+  padding: 40px;
+  background: url('images/paper-texture.jpg');
+  background-color: #fdf6e3;
+  background-size: cover;
+  border-radius: 12px;
+  margin-top: 50px;
+  animation: fadeIn 3s ease-in-out;
+  text-align: center;
+  font-size: 1.6em;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.love-letter {
+  font-family: 'Georgia', serif;
+  font-size: 1.4em;
+  color: #7f5a3f; 
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+}
+
+.love-letter h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #5b4f3b;
+  margin-bottom: 20px;
+}
+
+.love-letter p {
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.love-letter i {
+  font-style: italic;
+  color: #5b4f3b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Styling for Next Button */
+button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #8e6e4e;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #704b33;
+}
+
